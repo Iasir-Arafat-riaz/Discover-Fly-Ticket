@@ -122,4 +122,9 @@ nav ul li a:hover, a.active{
 }
 button{
     width: 20px;
+    background-color: #6072cc;
+}
+.lastInput{
+    height: 20px;
+    background-color: rgb(255, 0, 106);
 }
