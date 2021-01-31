@@ -29,7 +29,7 @@
     <!--Booking Section-->
     <main class="main-content container">
         <div class="booking-form">
-            <h2>Booking Flights</h2>
+            <h2 class="booking-syle">Booking Flights</h2>
             <div class="input-group">
                 <label for="">Flying From</label>
                 <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
@@ -100,8 +100,11 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
-            <input type="text">
+            <button id="booking" class="btn-style">Book Now</button>
+            <br>
+            
+            <h4 id="notification">Thank you sir for your booking, you will get notification maximum 24 hours, Stay with DISCOVER FLY & Descover around the world </h4>
+            <!-- <input type="text"> -->
         </div>
 
         <div class="booking-content">
@@ -170,10 +173,15 @@
                 document.getElementById("total").innerText = Total;
             }
 
+            document.getElementById("booking").addEventListener("click", function(){
+                const notify = document.getElementById("notification");
+                notify.style.display="block"
+            })
+
 
         </script>
 
-        <!--Thank You-->
+    
 </body>
 
 </html>
