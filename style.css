@@ -107,6 +107,7 @@ nav ul li a:hover, a.active{
 }
 
 .btn-style{
+    
     display: block;
     width: 100%;
     padding: 10px;
@@ -114,7 +115,9 @@ nav ul li a:hover, a.active{
     border: none;
     color: #fff;
     font-weight: 500;
-    background-color:  #e97020;
+    background-color:  #204fe9;
+    text-align: center;
+    
 }
 .amount{
     display: flex;
@@ -129,8 +132,12 @@ button{
 
 #notification{
     display: none;
+    color: rgb(187, 17, 51);
 }
 
 h2{
     color: rgb(20, 101, 148);
+}
+#ticketNotify{
+    color: darkblue;
 }

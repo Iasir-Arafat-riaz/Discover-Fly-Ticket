@@ -29,7 +29,7 @@
     <!--Booking Section-->
     <main class="main-content container">
         <div class="booking-form">
-            <h2 class="booking-syle">Booking Flights</h2>
+            <h2>Booking Flights</h2>
             <div class="input-group">
                 <label for="">Flying From</label>
                 <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
@@ -102,8 +102,9 @@
             </div>
             <button id="booking" class="btn-style">Book Now</button>
             <br>
-            
-            <h4 id="notification">Thank you sir for your booking, you will get notification maximum 24 hours, Stay with DISCOVER FLY & Descover around the world </h4>
+
+            <h4 id="notification">You have booked <span id="ticketNotify">0</span> ticket. we will confirm in 24 hours,
+                Stay with DISCOVER FLY. Thanks </h4> .
             <!-- <input type="text"> -->
         </div>
 
@@ -116,6 +117,7 @@
 
         </section>
         <script>
+            //First Class Code
             document.getElementById("firstClassPlus").addEventListener("click", function () {
                 firstClassTicket(true);
             })
@@ -137,7 +139,7 @@
                 document.getElementById("firstClassPrice").innerText = ticketMultifly;
                 CalculationFare()
             }
-
+            //Economy Class Code
             document.getElementById("economyPlus").addEventListener("click", function () {
                 EconomyClassTicket(true);
             })
@@ -161,27 +163,29 @@
                 document.getElementById("economyPrice").innerText = ticketMultifly;
                 CalculationFare()
             }
-            
-            function CalculationFare(){
+
+            function CalculationFare() {
                 const FirstClass = document.getElementById("firstClassInput").value;
                 const EconomyClass = document.getElementById("economyInput").value;
-                const Subtotal = FirstClass * 150 + EconomyClass*100;
+                const Subtotal = FirstClass * 150 + EconomyClass * 100;
                 document.getElementById("subtotal").innerText = Subtotal;
-                const vat = Subtotal/10;
+                const vat = Subtotal / 10;
                 document.getElementById("vat").innerText = vat;
                 const Total = Subtotal + vat;
                 document.getElementById("total").innerText = Total;
             }
-
-            document.getElementById("booking").addEventListener("click", function(){
+            // Notification feedBack Code for Book Now Button
+            document.getElementById("booking").addEventListener("click", function () {
                 const notify = document.getElementById("notification");
-                notify.style.display="block"
+                notify.style.display = "block"
+                const FirstClass = document.getElementById("firstClassInput").value;
+                const EconomyClass = document.getElementById("economyInput").value;
+                const allInput = FirstClass * 1 + EconomyClass * 1
+                document.getElementById("ticketNotify").innerText = allInput;
+
             })
 
-
         </script>
-
-    
 </body>
 
 </html>
